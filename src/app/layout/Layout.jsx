@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 
 const Layot = ({ children, showHero }) => {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+    <div className="flex flex-col min-h-screen overflow-hidden dark:bg-gray-800 bg-white dark:text-white">
         <Header/>
         {showHero && <Hero />}
         <div className="container mx-auto flex-1 py-10" >
