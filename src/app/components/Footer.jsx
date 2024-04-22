@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="flex flex-col font-body gap-[85px] mb-6 md:flex-row">
         <div>
             <h3  className="text-pink-500 font-bold text-[25px]">
-              GastroHeaven
+              READ.ME
             </h3>
             <p className="text-[20px]">Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit,<br/> sed do eiusmod tempor</p>
             <ul className="flex text-pink-500 gap-3 text-[22px] mt-2">

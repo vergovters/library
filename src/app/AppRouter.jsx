@@ -9,6 +9,7 @@ import BookPage from './pages/BookPage';
 import RegistrationPage from './pages/RegistrationPage';
 import LoginPage from './pages/LoginPage';
 import AuthorsPage from './pages/AuthorsPage';
+import AuthorPage from './pages/AuthorPage';
 
 const AppRouter = () => {
   return (
@@ -20,7 +21,7 @@ const AppRouter = () => {
       <Route path='/authors' element={<Layot showHero={false}><AuthorsPage/></Layot>}/>
       <Route element={<ProtectedRoute/>}>
         <Route path="/books/:id" element={<Layot showHero={false}><BookPage/></Layot>}/>
-        <Route path="/authors/:id" element={<Layot showHero={false}><BookPage/></Layot>}/>
+        <Route path="/authors/:id" element={<Layot showHero={false}><AuthorPage/></Layot>}/>
       </Route>
       
       <Route path="*" element={<Navigate to="/" />} />

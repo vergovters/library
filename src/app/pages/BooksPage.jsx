@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 const BooksPage = () => {
+    const { user ,loading, error, dispatch } = useContext(AuthContext);
+    console.log(user)
+
     return (
         <div>
-            bookpage 1
+            bookspage
         </div>
     );
 }
