@@ -16,15 +16,12 @@ const Header = () => {
                             <Link to="/books" className="py-2 px-6 flex transform hover:translate-y-[-3px] transition-all duration-300">
                                 Books
                             </Link>
-                            <a href="#" class="py-2 px-6 flex transform hover:translate-y-[-3px] transition-all duration-300">
-                                Product
-                            </a>
-                            <a href="#" class="py-2 px-6 flex transform hover:translate-y-[-3px] transition-all duration-300">
-                                Contact
-                            </a>
-                            <a href="#" class="py-2 px-6 flex transform hover:translate-y-[-3px] transition-all duration-300">
-                                Carrer
-                            </a>
+                            <Link to="/authors" className="py-2 px-6 flex transform hover:translate-y-[-3px] transition-all duration-300">
+                                Authors
+                            </Link>
+                            <Link to="/registration" className="py-2 px-6 flex transform hover:translate-y-[-3px] transition-all duration-300">
+                                Register
+                            </Link>
                         </nav>
                         <button class="lg:hidden flex flex-col ml-4">
                             <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
