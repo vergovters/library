@@ -20,10 +20,9 @@ const RegistrationPage = () => {
     const handleClick = async (e) => {
         e.preventDefault();
         try {
-              const res = axios.post(`${url}/api/auth/signup`, credentials)
-              navigate("/login")
-              console.log(res.data)
-              return res.data;
+          const res = axios.post(`${url}/api/auth/signup`, credentials)
+          navigate("/login")
+          return res.data;
               
         } catch (err) {
           console.log(err);
