@@ -11,6 +11,8 @@ import LoginPage from './pages/LoginPage';
 import AuthorsPage from './pages/AuthorsPage';
 import AuthorPage from './pages/AuthorPage';
 import SearchPage from './pages/SearchPage';
+import StatisticPage from './pages/StatisticPage';
+import ProfilePage from './pages/ProfilePage';
 
 const AppRouter = () => {
   return (
@@ -23,7 +25,9 @@ const AppRouter = () => {
       <Route path="/search/:title" element={<Layot showHero={false}><SearchPage/></Layot>}/>
       <Route element={<ProtectedRoute/>}>
         <Route path="/books/:id" element={<Layot showHero={false}><BookPage/></Layot>}/>
+        <Route path="/profile" element={<Layot showHero={false}><ProfilePage/></Layot>}/>
         <Route path="/authors/:id" element={<Layot showHero={false}><AuthorPage/></Layot>}/>
+        <Route path="/statistic" element={<Layot showHero={false}><StatisticPage/></Layot>}/>
       </Route>
       
       <Route path="*" element={<Navigate to="/" />} />

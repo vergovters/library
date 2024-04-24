@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import { GiSpy } from "react-icons/gi";
 
 const Header = () => {
     const { user, dispatch } = useContext(AuthContext);
@@ -14,16 +15,14 @@ const Header = () => {
         dispatch({ type: "LOGOUT", payload: err.response.data });
     }
   };
-
-  console.log(user)
     return (
-        <header class="h-24 sm:h-32 flex items-center z-30 w-full dark:bg-gray-800 bg-white">
-                <div class="container mx-auto px-6 flex items-center justify-between">
-                    <div class="uppercase text-gray-800 dark:text-white font-black text-3xl">
+        <header className="h-24 sm:h-32 flex items-center z-30 w-full dark:bg-gray-800 bg-white">
+                <div className="container mx-auto px-6 flex items-center justify-between">
+                    <div className="uppercase text-gray-800 dark:text-white font-black text-3xl">
                         Read.ME
                     </div>
-                    <div class="flex items-center">
-                        <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
+                    <div className="flex items-center">
+                        <nav className="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
                             <Link to="/" className="py-2 px-6 flex transform hover:translate-y-[-3px] transition-all duration-300">
                                 Home
                             </Link>
@@ -35,7 +34,7 @@ const Header = () => {
                             </Link>
                             {user ? (
                                 <div className='flex text-lg'>
-                                    <p className='py-2 px-6 text-pink-500'>{user.name}</p>
+                                    <Link to="/profile" className='py-2 px-6 text-pink-500'>{user.name}</Link>
                                     <button className="flex transform uppercase hover:translate-y-[-3px] transition-all py-2 duration-300 text-lg" onClick={logout}>Logout</button>
                                 </div>
                             ): (
@@ -43,17 +42,11 @@ const Header = () => {
                                     Register
                                 </Link>
                             )}
-                            
                         </nav>
-                        <button class="lg:hidden flex flex-col ml-4">
-                            <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
-                            </span>
-                            <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
-                            </span>
-                            <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
-                            </span>
-                        </button>
                     </div>
+                    {
+                        user?.isDataAnalytics && <Link className='absolute right-11 text-2xl' to="/statistic"><GiSpy /></Link>
+                    }
                 </div>
             </header>
     );
