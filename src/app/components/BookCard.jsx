@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AthorCard = ({ book }) => {
+const BookCard = ({ book }) => {
     return (
         <div className='border border-solid border-pink-500 p-4 m-6 rounded-md'> 
             <Link to={`/books/${book.id}`} >
@@ -14,4 +14,4 @@ const AthorCard = ({ book }) => {
     );
 }
 
-export default AthorCard;
+export default BookCard;

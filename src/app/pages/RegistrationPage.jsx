@@ -23,7 +23,6 @@ const RegistrationPage = () => {
           const res = axios.post(`${url}/api/auth/signup`, credentials)
           navigate("/login")
           return res.data;
-              
         } catch (err) {
           console.log(err);
         }

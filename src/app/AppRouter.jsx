@@ -22,7 +22,7 @@ const AppRouter = () => {
       <Route path='/registration' element={<Layot showHero={false}><RegistrationPage/></Layot>}/>
       <Route path='/login' element={<Layot showHero={false}><LoginPage/></Layot>}/>
       <Route path='/authors' element={<Layot showHero={false}><AuthorsPage/></Layot>}/>
-      <Route path="/search/:title" element={<Layot showHero={false}><SearchPage/></Layot>}/>
+      <Route path="/search" element={<Layot showHero={false}><SearchPage/></Layot>}/>
       <Route element={<ProtectedRoute/>}>
         <Route path="/books/:id" element={<Layot showHero={false}><BookPage/></Layot>}/>
         <Route path="/profile" element={<Layot showHero={false}><ProfilePage/></Layot>}/>
