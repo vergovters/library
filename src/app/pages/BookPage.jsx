@@ -115,7 +115,7 @@ const BookPage = () => {
                     Next
                 </button>
             </div>
-            <div className='flex flex-col gap-5 mt-5'>
+            <div className='flex flex-col gap-5 mt-5 w-[500px]'>
               
                 <div className='flex flex-col gap-3'>
                     <label for="message" class="block text-sm font-medium text-gray-900 dark:text-white">Your comment:</label>
