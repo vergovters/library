@@ -25,7 +25,7 @@ const CommentCard= ({props}) => {
   };
 
   return (
-    <div className="border border-pink-500 rounded-md p-2 m-3 w-[500px]">
+    <div className="border border-pink-500 rounded-md p-2 my-3 w-[500px]">
         <div className="text-xl italic font-bold">{props.user?.name}</div>
         <div className="flex">{renderRating()}</div>
         <div className="ml-2">{props.comment}</div>

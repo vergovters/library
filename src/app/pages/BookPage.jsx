@@ -29,10 +29,12 @@ const BookPage = () => {
     };
 
     const handleNextPage = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         setPage(prevPage => Math.min(prevPage + 1, totalPages));
     }
 
     const handlePrevPage = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         setPage(prevPage => Math.max(prevPage - 1, 1));
     }
 

@@ -23,14 +23,14 @@ const AuthorPage = () => {
 
     
     return (
-        <div className='flex gap-[100px]'>
+        <div className='flex gap-[100px] pl-[120px]'>
             {author && ( 
                 <>
                     <div className="rounded-full overflow-hidden w-[400px] h-[400px] z-10">
                         <img src={author.avatarUrl} alt="Rectangular Image" className="w-full h-full object-cover" />
                     </div>
                     <div>
-                        <p className='text-3xl mb-2 mt-[100px]'>{author.name} {author.surname}</p>
+                        <p className='text-3xl mb-2 mt-[70px]'>{author.name} {author.surname}</p>
                         <p className='w-[700px]'>{author.description}</p>
                     </div>
                 </>
