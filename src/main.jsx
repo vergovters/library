@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AppRouter from './app/AppRouter.jsx'
+import AppRouter from './app/Processes.jsx'
 import './main.css'
 import { BrowserRouter } from 'react-router-dom'
 import { AuthContextProvider } from './app/context/AuthContext'

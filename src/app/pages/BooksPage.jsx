@@ -41,11 +41,11 @@ const BooksPage = () => {
                 return <BookCard key={book.id} book={book} />;
             })}
             <div className='flex items-center'>
-                <button className='mr-2' onClick={handlePrevPage} disabled={currentPage === 1}>
+                <button className='mr-2 hover:cursor-pointer' onClick={handlePrevPage} disabled={currentPage === 1}>
                     Prev
                 </button>
                 <span>{currentPage} of {totalPages}</span>
-                <button className='ml-2' onClick={handleNextPage} disabled={currentPage === totalPages}>
+                <button className='ml-2 hover:cursor-pointer' onClick={handleNextPage} disabled={currentPage === totalPages}>
                     Next
                 </button>
             </div>

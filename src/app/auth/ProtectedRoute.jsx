@@ -1,14 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Navigate, Outlet, useSearchParams } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const ProtectedRoute = () => {
-    const [isAuthenticated, setIs] = useState(true)
+    const { user} = useContext(AuthContext);
 
-    // if(isLoading){
-    //     return null
-    // }
-
-    if(isAuthenticated){
+    if(user){
         return <Outlet/>
     }
 
